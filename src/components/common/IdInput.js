@@ -7,6 +7,8 @@ export class IdInput extends Component {
     this.state = {
       inputValue: ""
     };
+
+    // this.inputfield=this.inputfield.bind(this);
   }
 
   componentWillMount() {
@@ -15,15 +17,29 @@ export class IdInput extends Component {
     });
   }
 
-  
+//   inputfield(updateId, id){
+// return <input onChange={updateId} value={id} placeholder=":id">
+// {this.state.inputValue}
+// </input>
+//   }
+
+
 
   render() {
-    const { updateTargetID, id } = this.props;
+    const { updateId, id ,exampleId ,idNote } = this.props;
 
     return (
-      <input onChange={updateTargetID} value={id} placeholder=":id">
-        {this.state.inputValue}
-      </input>
+      <> 
+        <p><b>Example Id</b></p>
+
+        <code>{exampleId}</code>
+        <p>{idNote}</p>
+
+        {/* <>{this.inputfield(updateId, id)}</> */}
+       <input className="idInput" onChange={updateId} value={id} placeholder=":id" />
+        
+      </>
+     
     );
   }
 }

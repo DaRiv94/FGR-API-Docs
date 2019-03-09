@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## FGR API Docs
 
-## Available Scripts
+This application was built to act as the user interface for FGR backend apis.
 
-In the project directory, you can run:
+This application is currently hosted [here](https://fgr-api-Docs.surge.sh/) **NEED TO CHNAGE**
 
-### `npm start`
+### Shortcuts
+* [Key Features](https://github.com/DaRiv94/FGR-API-Docs#Key-Features)
+* [Technologies](https://github.com/DaRiv94/FGR-API-Docs#Technologies)
+* [Links](https://github.com/DaRiv94/FGR-API-Docs#Links)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Key Features
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* Rich User Interface
+* Documents FGR APIs
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**React -** For front-end development and design<br>
+**GIT -** For source control.<br>
+**GitHub -** For external remote repository.<br>
+**Bootstrap -** For use with styling.<br>
+**JavaScript -** As programming language used thoughout.<br>
+**HTML -** For markup to combine with JSX.<br>
+**CSS -** For styling, and overriding Bootstrap styles.<br>
+**Surge -** For could hosting<br>
 
-### `npm run eject`
+## Links
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Currently FGR API Docs is hosted [here](https://fgr-api-Docs.surge.sh/) **NEED TO CHNAGE**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you want to see my other work, here are some links,
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+My GitHub Homepage : https://github.com/DaRiv94/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+My Portfolio Website : http://FrankieRiviera.com
