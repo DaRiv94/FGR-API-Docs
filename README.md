@@ -2,7 +2,7 @@
 
 This application was built to act as the user interface for FGR backend apis.
 
-This application is currently hosted [here](https://fgr-api-Docs.surge.sh/) **NEED TO CHNAGE**
+This application is currently hosted [here](https://fgr-api-Docs.surge.sh/) 
 
 ### Shortcuts
 * [Key Features](https://github.com/DaRiv94/FGR-API-Docs#Key-Features)
@@ -31,7 +31,7 @@ This application is currently hosted [here](https://fgr-api-Docs.surge.sh/) **NE
 
 ## Links
 
-Currently FGR API Docs is hosted [here](https://fgr-api-Docs.surge.sh/) **NEED TO CHNAGE**
+Currently FGR API Docs is hosted [here](https://fgr-api-Docs.surge.sh/) 
 
 If you want to see my other work, here are some links,
 
