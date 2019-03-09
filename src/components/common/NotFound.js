@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom';
-//import ApiViewerPage from '../ApiViewer/ApiViewerPage';
+import VidlyAPIPage from "../API components/VidlyAPIPage";
+import PresidentAPIPage from "../API components/PresidentAPI.js/PresidentAPIPage";
 
 export class NotFound extends Component {
   render() {
@@ -9,13 +10,35 @@ export class NotFound extends Component {
       <h1>404 Not Found</h1>
       <h5>Sorry, there is nothing here. But since you are here now maybe you want to check out my FGR APIs?</h5>
 
-      {/* <NavLink className="btn btn-primary" to="/vidly" component={ApiViewerPage}>Go To FGR Vidly API</NavLink> */}
+      <div>
+          <NavLink
+            className="btn btn-primary"
+            to="/vidly"
+            component={VidlyAPIPage}
+          >
+            Go To FGR Vidly API
+          </NavLink>
+          <p>FGR Vidly API is an example movie rental service api.</p>
+        </div>
 
-      {/* <NavLink className="btn btn-primary" to="/president" component={ApiViewerPage}>Go To FGR President API</NavLink> */}
+        <div>
+          <NavLink
+            className="btn btn-primary"
+            to="/president"
+            component={PresidentAPIPage}
+          >
+            Go To President API
+          </NavLink>
+          <p>
+            FGR President API is an example api that uses Microsoft Azure Table
+            Storage
+          </p>
+        </div>
 
-      <h6>Or maybe you want to checkout my  <a href="http://frankieriviera.com/" target="_blank" rel="noopener noreferrer" >Portfolio website</a>?</h6>
 
-      <h6>Or maybe you want to see the <a href="https://github.com/DaRiv94" target="_blank" rel="noopener noreferrer" >Github page for this website</a>?</h6>
+      <p>Or maybe you want to checkout my  <a href="http://frankieriviera.com/" target="_blank" rel="noopener noreferrer" >Portfolio website</a>?</p>
+
+      <p>Or maybe you want to see the <a href="https://github.com/DaRiv94" target="_blank" rel="noopener noreferrer" >Github page for this website</a>?</p>
 
     </div>
     )

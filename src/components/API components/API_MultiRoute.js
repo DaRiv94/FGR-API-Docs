@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import API_Route from "./API_Route";
+import ApiRoute from "./API_Route";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 
-export class API_MultiRoute extends Component {
+export class ApiMultiRoute extends Component {
   constructor(props) {
     super(props);
 
@@ -44,7 +44,7 @@ export class API_MultiRoute extends Component {
               {endpoints.map(endpoint => {
                 if (endpoint.multiroute) {
                   return (
-                    <API_MultiRoute
+                    <ApiMultiRoute
                       renderLogin={renderLogin}
                       renderIdInput={renderIdInput}
                       renderPayload={renderPayload}
@@ -58,7 +58,7 @@ export class API_MultiRoute extends Component {
                   );
                 } else {
                   return (
-                    <API_Route
+                    <ApiRoute
                       renderLogin={renderLogin}
                       renderIdInput={renderIdInput}
                       renderPayload={renderPayload}
@@ -80,4 +80,4 @@ export class API_MultiRoute extends Component {
   }
 }
 
-export default API_MultiRoute;
+export default ApiMultiRoute;

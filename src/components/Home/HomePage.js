@@ -12,7 +12,7 @@ export class HomePage extends Component {
       <div className="HomePage">
         <h1>Welcome to FGR API Docs!</h1>
         <h5>
-          FGR API Docs is a web user interface built to demonstrate and display
+          FGR API Docs is a web user interface built to document, demonstrate and display
           how FGR APIs work.{" "}
         </h5>
 

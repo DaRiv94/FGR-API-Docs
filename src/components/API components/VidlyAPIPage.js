@@ -60,7 +60,10 @@ export class VidlyAPIPage extends Component {
 
   //api method calls specifc to api
   vidlyPOST(event) {
-    var login = event.target.id === "loginButton";
+    console.log("targ: ",event.target);
+    console.log("targ: ",event.target.body);
+    
+    var login = event.target.id === "loginButton" || event.target.value==="https://boiling-meadow-22539.herokuapp.com/api/auth";
     vidly
       .post(event.target.value, this.state.payload, this.state.jwt)
       .then(data => {
