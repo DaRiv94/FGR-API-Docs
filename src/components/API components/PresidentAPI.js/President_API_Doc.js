@@ -107,7 +107,7 @@ export class Vidly_API_Doc extends Component {
     return (
       <div className="row">
         <div className="UIDiv col-md-7">
-          <h1>FGR Presidents Api</h1>
+          <h1>FGR President Api</h1>
 
           <h6>FGR President API is an example api that uses Microsoft Azure Table Storage</h6>
           <h6>

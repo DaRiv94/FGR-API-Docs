@@ -21,7 +21,7 @@ class President {
       }
     } catch (err) {
       console.log("err: ",err);
-      return err;
+      return err.response.data;
     }
   }
 
@@ -31,7 +31,7 @@ class President {
       const res = await axios.post(url, payload);
       return res.data;
     } catch (err) {
-      return err;
+      return err.response.data;
     }
   }
 
@@ -46,7 +46,7 @@ class President {
       const res = await axios.put(url + `/${RowKey}`, payload);
       return res.data;
     } catch (err) {
-      return err;
+      return err.response.data;
     }
   }
 
