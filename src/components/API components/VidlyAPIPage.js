@@ -46,7 +46,7 @@ export class VidlyAPIPage extends Component {
   //to clear the id when we enter a Section.
   resetId() {
     this.setState({ id: "" });
-    setTimeout(console.log("resetid id: ", this.state.id), 2000);
+    //setTimeout(console.log("resetid id: ", this.state.id), 2000);
   }
 
   //specifc to routes that have /:id param
@@ -55,13 +55,22 @@ export class VidlyAPIPage extends Component {
     this.setState({
       id: event.target.value
     });
-    console.log("updateid id: ", event.target.value);
+    //console.log("updateid id: ", event.target.value);
   }
 
   //api method calls specifc to api
   vidlyPOST(event) {
-    console.log("targ: ",event.target);
-    console.log("targ: ",event.target.body);
+
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
+    //console.log("targ: ",event.target);
+    //console.log("targ: ",event.target.body);
     
     var login = event.target.id === "loginButton" || event.target.value==="https://boiling-meadow-22539.herokuapp.com/api/auth";
     vidly
@@ -78,7 +87,16 @@ export class VidlyAPIPage extends Component {
 
   //api method calls specifc to api
   vidlyGET(event) {
-    console.log("target: ",event.target);
+
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
+    //console.log("target: ",event.target);
     if (event.target.id) {
       vidly
         .get(event.target.value, this.state.jwt, event.target.id, this.state.id)
@@ -95,6 +113,15 @@ export class VidlyAPIPage extends Component {
 
   //api method calls specifc to api
   vidlyPUT(event) {
+
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
     if (event.target.id) {
       vidly
         .put(
@@ -119,6 +146,15 @@ export class VidlyAPIPage extends Component {
 
   //api method calls specifc to api
   vidlyDELETE(event) {
+
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
     if (event.target.id) {
       vidly
         .delete(

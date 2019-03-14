@@ -16,7 +16,6 @@ export class API_Route extends Component {
     let {
       className,
       endpoint,
-      title,
       url,
       methodType,
       hasIdInput,

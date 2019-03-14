@@ -9,8 +9,9 @@ export class PresidentAPIPage extends Component {
     super(props);
 
     this.state = {
+      firstCall: true,
       appData: FGR_President_API_data,
-      hasAuthentication:false,
+      hasAuthentication: false,
       param: "",
       jwt: "",
       payload: "",
@@ -60,25 +61,45 @@ export class PresidentAPIPage extends Component {
 
   //api method calls specifc to api
   PresidentPOST(event) {
-    President
-      .post(event.target.value, this.state.payload, this.state.jwt)
-      .then(data => {
-       
-          this.setState({ dataLoaded: true, jsonData: data });
-        
-      });
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
+    President.post(event.target.value, this.state.payload, this.state.jwt).then(
+      data => {
+        this.setState({ dataLoaded: true, jsonData: data });
+      }
+    );
     this.resetParam();
   }
 
   //api method calls specifc to api
   PresidentGET(event) {
-    console.log("target: ",event.target);
+    
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
+     
+
+    console.log("target: ", event.target);
     if (event.target.id) {
-      President
-        .get(event.target.value, this.state.jwt, event.target.id, this.state.param)
-        .then(data => {
-          this.setState({ dataLoaded: true, jsonData: data });
-        });
+      President.get(
+        event.target.value,
+        this.state.jwt,
+        event.target.id,
+        this.state.param
+      ).then(data => {
+        this.setState({ dataLoaded: true, jsonData: data });
+      });
     } else {
       President.get(event.target.value, this.state.jwt).then(data => {
         this.setState({ dataLoaded: true, jsonData: data });
@@ -89,41 +110,58 @@ export class PresidentAPIPage extends Component {
 
   //api method calls specifc to api
   PresidentPUT(event) {
+
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
+
     if (event.target.id) {
-      President
-        .put(
-          event.target.value,
-          this.state.payload,
-          this.state.jwt,
-          event.target.id,
-          this.state.param
-        )
-        .then(data => {
-          this.setState({ dataLoaded: true, jsonData: data });
-        });
+      President.put(
+        event.target.value,
+        this.state.payload,
+        this.state.jwt,
+        event.target.id,
+        this.state.param
+      ).then(data => {
+        this.setState({ dataLoaded: true, jsonData: data });
+      });
     } else {
-      President
-        .put(event.target.value, this.state.payload, this.state.jwt)
-        .then(data => {
-          this.setState({ dataLoaded: true, jsonData: data });
-        });
+      President.put(
+        event.target.value,
+        this.state.payload,
+        this.state.jwt
+      ).then(data => {
+        this.setState({ dataLoaded: true, jsonData: data });
+      });
       this.resetParam();
     }
   }
 
   //api method calls specifc to api
   PresidentDELETE(event) {
+
+    if (this.state.firstCall) {
+      alert(`Thanks for checking out my APIs! 
+    Please wait a moment while the heroku server wakes up.
+    Unless you refresh the page, you shouldn't need to see this 
+    message again for this Api.`);
+      this.setState({ firstCall: false });
+    }
+
     if (event.target.id) {
-      President
-        .delete(
-          event.target.value,
-          this.state.jwt,
-          event.target.id,
-          this.state.param
-        )
-        .then(data => {
-          this.setState({ dataLoaded: true, jsonData: data });
-        });
+      President.delete(
+        event.target.value,
+        this.state.jwt,
+        event.target.id,
+        this.state.param
+      ).then(data => {
+        this.setState({ dataLoaded: true, jsonData: data });
+      });
     } else {
       President.delete(event.target.value, this.state.jwt).then(data => {
         this.setState({ dataLoaded: true, jsonData: data });
@@ -132,28 +170,28 @@ export class PresidentAPIPage extends Component {
     }
   }
 
-//   //methods specifc to if an api that has authorization
-//   login() {
-//     const payload = { email: "b@b.com", password: "bbbb" };
-//     President
-//       .post(
-//         "https://boiling-meadow-22539.herokuapp.com/api/auth",
-//         payload,
-//         this.state.jwt
-//       )
-//       .then(data => {
-//         if (data.length > 130) {
-//           this.setState({ dataLoaded: true, jsonData: data, jwt: data });
-//         } else {
-//           this.setState({ dataLoaded: true, jsonData: data });
-//         }
-//       });
-//   }
+  //   //methods specifc to if an api that has authorization
+  //   login() {
+  //     const payload = { email: "b@b.com", password: "bbbb" };
+  //     President
+  //       .post(
+  //         "https://boiling-meadow-22539.herokuapp.com/api/auth",
+  //         payload,
+  //         this.state.jwt
+  //       )
+  //       .then(data => {
+  //         if (data.length > 130) {
+  //           this.setState({ dataLoaded: true, jsonData: data, jwt: data });
+  //         } else {
+  //           this.setState({ dataLoaded: true, jsonData: data });
+  //         }
+  //       });
+  //   }
 
-//   //methods specifc to if an api that has authorization
-//   logout(event) {
-//     this.setState({ jwt: "" });
-//   }
+  //   //methods specifc to if an api that has authorization
+  //   logout(event) {
+  //     this.setState({ jwt: "" });
+  //   }
 
   render() {
     return (

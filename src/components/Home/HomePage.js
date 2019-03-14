@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import VidlyAPIPage from "../API components/VidlyAPIPage";
-//import NotFound from '../common/NotFound';
 import PresidentAPIPage from "../API components/PresidentAPI.js/PresidentAPIPage";
+import USColonyPage from '../API components/USColonyAPI/USColonyPage';
 
 import "./HomePage.css";
 
@@ -38,6 +38,19 @@ export class HomePage extends Component {
           <p>
             FGR President API is an example api that uses Microsoft Azure Table
             Storage
+          </p>
+        </div>
+
+        <div>
+          <NavLink
+            className="btn btn-primary"
+            to="/uscolony"
+            component={USColonyPage}
+          >
+            Go To US Colony API
+          </NavLink>
+          <p>
+            FGR US Colony API is an example serverless api that uses a Microsoft Azure Function in the Azure cloud
           </p>
         </div>
 

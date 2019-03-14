@@ -4,10 +4,10 @@ import axios from "axios";
 
 class vidly {
   static async get(url, jwt, targetId = "", id = "") {
-    console.log("url: ",url);
-    console.log("jwt: ",jwt);
-    console.log("targetId: ",targetId);
-    console.log("id: ",id);
+    // console.log("url: ",url);
+    // console.log("jwt: ",jwt);
+    // console.log("targetId: ",targetId);
+    // console.log("id: ",id);
 
     try {
       if (targetId==="true" && jwt) {
@@ -70,9 +70,9 @@ class vidly {
         });
         return res.data;
       } else if (jwt) {
-        console.log("I should always have a target type so this condition shouldnt occur");
+        //console.log("I should always have a target type so this condition shouldnt occur");
       } else {
-        console.log("last else of put");
+        //console.log("last else of put");
         const res = await axios.put(url + `/${id}`, payload);
         return res.data;
       }
@@ -91,15 +91,15 @@ class vidly {
 
     try {
       if (targetId==="true" && jwt) {
-        console.log("if targ and jwt");
+        //console.log("if targ and jwt");
         const res = await axios.delete(url + `/${id}`, {
           headers: { "x-auth-token": jwt  }
         });
         return res.data;
       } else if (jwt) {
-        console.log(" Should always have a target type so this condition shouldnt occur");
+        //console.log(" Should always have a target type so this condition shouldnt occur");
       } else {
-        console.log("last else of delete");
+        //console.log("last else of delete");
         const res = await axios.delete(url + `/${id}`);
         return res.data;
       }

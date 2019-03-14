@@ -9,7 +9,7 @@ function Payload({schema, example, exampleNote}) {
       <ul>
         {schema.map(property => {
           return (
-            <li>
+            <li key={property.key} >
               {property.key + " : " + property.type}
               {property.optional ? <span>(optional)</span> : <></>}
             </li>

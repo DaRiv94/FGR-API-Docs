@@ -92,8 +92,14 @@ code {
     padding-right: 15px;
 }
 
+.DELETE{
+    color:rgb(243, 8, 0);
+    font-weight: bold;
+    padding-right: 15px;
+}
+
 .apicall{
-    width:30%;
+    padding: 6px 15px;
 }
 
 
