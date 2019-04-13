@@ -9,6 +9,7 @@ export class VidlyAPIPage extends Component {
     super(props);
 
     this.state = {
+      firstCall: true,
       appData: FGR_Vidly_API_data,
       hasAuthentication:true,
       id: "",
