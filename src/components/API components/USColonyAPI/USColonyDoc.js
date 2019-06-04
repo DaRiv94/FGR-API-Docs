@@ -119,7 +119,7 @@ export class US_Colony_Api_Doc extends Component {
           </h6>
           <h6>The :id that is supplied could be 1-13 where the returning states will be...</h6>
           <ol>
-              <li>Deleware</li>
+              <li>Delaware</li>
               <li>Pennsylvania</li>
               <li>New Jersey</li>
               <li>Georgia</li>

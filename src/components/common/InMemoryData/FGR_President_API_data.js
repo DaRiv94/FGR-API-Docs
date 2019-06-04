@@ -75,7 +75,7 @@ const FGR_President_API_data ={
                     { key: "party", type: "String", optional: false }
                     
                   ],
-                  example: `{ "name":"Zachary Taylor","party":"Whig"}`
+                  example: `{ "name":"John F. Kennedy","party":"Democrat"}`
                 }
               },
               {
