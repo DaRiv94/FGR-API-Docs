@@ -57,7 +57,7 @@ export class HomePage extends Component {
         <p>
           To Learn more about FGR Applications visit my Portfolio website{" "}
           <a
-            href="http://frankieriviera.com/"
+            href="https://frankieriviera.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
