@@ -1,3 +1,5 @@
+[<img src="./images/FGR_Transparent.png" width="100" />](https://frankieriviera.com)
+
 ## FGR API Docs
 
 This application was built to act as the user interface for FGR backend apis.
